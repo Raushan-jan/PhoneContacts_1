@@ -34,15 +34,7 @@ public class Test {
             }
             System.out.println("Группы: ");
             phoneContacts.creatNewContactAndAddInGroup();
-
+            phoneContacts.printSortedContacts();
         }
     }
-
 }
-
-
-
-
-
-
-

@@ -34,9 +34,19 @@ public class PhoneContacts {
             }
         }
     }
-    public void setNewGroups(HashMap<String, List<Contacts>> newGroups) {
-        this.newGroups = newGroups;
+
+    public void printSortedContacts() {
+        List<Contacts> contacts = new ArrayList<>();
+        for (Map.Entry<String, List<Contacts>> entry : newGroups.entrySet()) {
+            for (Contacts contact : entry.getValue()) {
+                if (!contacts.contains(contact)) {
+                    contacts.add(contact);
+                }
+            }
+        }
+        contacts.sort(Comparator.naturalOrder());
+        for (Contacts contact : contacts) {
+            System.out.println(contact.toString());
+        }
     }
-
-
 }
